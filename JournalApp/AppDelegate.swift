@@ -7,16 +7,30 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let mainContext = createMainContext()
+        let firstViewController = getFirstViewController()
+        firstViewController.managedObjectContext = mainContext
         return true
+    }
+    
+    func getFirstViewController() -> JournalViewController {
+        // Get the window's root view controller (which is a navigation controller)
+        let navigationController = window?.rootViewController as! UINavigationController
+
+        // Get the navigation controller's first view controller
+        let firstVC = navigationController.viewControllers[0]
+
+        // Cast it to a JournalViewController and return
+        return firstVC as! JournalViewController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

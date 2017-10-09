@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D4ABA751F8C03340062C8CA /* Catalogue.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ABA731F8C03340062C8CA /* Catalogue.xcdatamodeld */; };
+		4D4ABA771F8C03700062C8CA /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4ABA761F8C03700062C8CA /* CoreDataStack.swift */; };
 		4D6468F01D6A5300008EF716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6468EF1D6A5300008EF716 /* AppDelegate.swift */; };
 		4D6468F21D6A5300008EF716 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D6468F11D6A5300008EF716 /* JournalViewController.swift */; };
 		4D6468F51D6A5300008EF716 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D6468F31D6A5300008EF716 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D4ABA741F8C03340062C8CA /* Catalogue.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Catalogue.xcdatamodel; sourceTree = "<group>"; };
+		4D4ABA761F8C03700062C8CA /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		4D6468EC1D6A5300008EF716 /* JournalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JournalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6468EF1D6A5300008EF716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D6468F11D6A5300008EF716 /* JournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 				4D6468F61D6A5300008EF716 /* Assets.xcassets */,
 				4D6468F81D6A5300008EF716 /* LaunchScreen.storyboard */,
 				4D6468FB1D6A5300008EF716 /* Info.plist */,
+				4D4ABA731F8C03340062C8CA /* Catalogue.xcdatamodeld */,
+				4D4ABA761F8C03700062C8CA /* CoreDataStack.swift */,
 			);
 			path = JournalApp;
 			sourceTree = "<group>";
@@ -200,7 +206,9 @@
 				4DDEC06A1D7CC6880006AF0E /* SearchEntryViewController.swift in Sources */,
 				4D6468F01D6A5300008EF716 /* AppDelegate.swift in Sources */,
 				4DDEC06C1D7DEEDD0006AF0E /* SearchTableViewCell.swift in Sources */,
+				4D4ABA771F8C03700062C8CA /* CoreDataStack.swift in Sources */,
 				4DDEC06F1D7E4D740006AF0E /* AddEntryViewController.swift in Sources */,
+				4D4ABA751F8C03340062C8CA /* Catalogue.xcdatamodeld in Sources */,
 				4DDEC0601D7CB7230006AF0E /* DetailViewController.swift in Sources */,
 				4D7325CA1D73E1C7008C132F /* JournalCell.swift in Sources */,
 			);
@@ -378,6 +386,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D4ABA731F8C03340062C8CA /* Catalogue.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D4ABA741F8C03340062C8CA /* Catalogue.xcdatamodel */,
+			);
+			currentVersion = 4D4ABA741F8C03340062C8CA /* Catalogue.xcdatamodel */;
+			path = Catalogue.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4D6468E41D6A52FF008EF716 /* Project object */;
 }

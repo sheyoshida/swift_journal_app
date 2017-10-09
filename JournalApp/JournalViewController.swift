@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
-class ViewController: UIViewController {
+class JournalViewController: UIViewController {
     
     @IBOutlet
     var tableView: UITableView!
     
     var journalItems = [JournalEntry]()
-    
+    var managedObjectContext: NSManagedObjectContext!
     
     // Mark: Lifecycle
     
@@ -65,7 +66,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension JournalViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -155,7 +156,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ViewController: PassItemDelegate {
+extension JournalViewController: PassItemDelegate {
     func passItemToRootView(_ item: JournalEntry) {
         journalItems.insert(item, at: 0)
         // TODO: - add data persistance here
