@@ -25,14 +25,6 @@ class JournalViewController: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension // cell height matches text
         tableView.estimatedRowHeight = 161
         tableView.tableFooterView = UIView() // hide empty views
-        
-        // TO TRY!
-        if #available(iOS 11.0, *) {
-            navigationItem.largeTitleDisplayMode = .always
-            navigationItem.hidesSearchBarWhenScrolling = true
-        } else {
-            // Fallback on earlier versions
-        }
     }
     
     // Mark: Actions
