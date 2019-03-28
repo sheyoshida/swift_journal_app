@@ -71,29 +71,38 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oJ-Z4-Rjl">
-                                                    <rect key="frame" x="15" y="16" width="345" height="26"/>
+                                                    <rect key="frame" x="130.5" y="19" width="228.5" height="26"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Detail: " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywo-3N-xNf">
-                                                    <rect key="frame" x="15" y="42" width="345" height="52.5"/>
+                                                    <rect key="frame" x="130.5" y="49" width="228.5" height="47.5"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-zV-fK6">
+                                                    <rect key="frame" x="31" y="19" width="91.5" height="67"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="xFa-zV-fK6" secondAttribute="height" multiplier="108:79" id="2QO-aO-Otc"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="ywo-3N-xNf" secondAttribute="bottom" constant="5" id="5Ub-OU-EYg"/>
-                                                <constraint firstItem="5oJ-Z4-Rjl" firstAttribute="leading" secondItem="QFZ-lz-yap" secondAttribute="leading" constant="15" id="Cle-vc-hb1"/>
-                                                <constraint firstItem="ywo-3N-xNf" firstAttribute="leading" secondItem="QFZ-lz-yap" secondAttribute="leading" constant="15" id="Kmd-J9-f8J"/>
-                                                <constraint firstAttribute="trailing" secondItem="ywo-3N-xNf" secondAttribute="trailing" constant="15" id="Xf8-iH-y66"/>
-                                                <constraint firstAttribute="bottom" secondItem="ywo-3N-xNf" secondAttribute="bottom" priority="750" constant="10" id="Zfm-uF-BjT"/>
+                                                <constraint firstItem="xFa-zV-fK6" firstAttribute="leading" secondItem="QFZ-lz-yap" secondAttribute="leadingMargin" constant="16" id="7xk-UC-ohK"/>
+                                                <constraint firstAttribute="trailing" secondItem="ywo-3N-xNf" secondAttribute="trailing" constant="16" id="Xf8-iH-y66"/>
+                                                <constraint firstItem="ywo-3N-xNf" firstAttribute="leading" secondItem="xFa-zV-fK6" secondAttribute="trailing" constant="8" id="Xpr-bF-S5T"/>
+                                                <constraint firstItem="xFa-zV-fK6" firstAttribute="top" secondItem="QFZ-lz-yap" secondAttribute="topMargin" constant="8" id="YQB-0I-iGo"/>
+                                                <constraint firstAttribute="bottom" secondItem="ywo-3N-xNf" secondAttribute="bottom" priority="750" constant="8" id="Zfm-uF-BjT"/>
+                                                <constraint firstItem="5oJ-Z4-Rjl" firstAttribute="leading" secondItem="xFa-zV-fK6" secondAttribute="trailing" constant="8" id="cQY-qC-nqZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="ywo-3N-xNf" secondAttribute="bottom" priority="10" constant="10" id="eLv-No-jno"/>
-                                                <constraint firstItem="ywo-3N-xNf" firstAttribute="top" secondItem="5oJ-Z4-Rjl" secondAttribute="bottom" id="jBM-qD-Lq5"/>
-                                                <constraint firstAttribute="trailing" secondItem="5oJ-Z4-Rjl" secondAttribute="trailing" constant="15" id="ooh-eY-ANs"/>
-                                                <constraint firstItem="5oJ-Z4-Rjl" firstAttribute="top" secondItem="QFZ-lz-yap" secondAttribute="topMargin" constant="5" id="pL7-EP-7hi"/>
+                                                <constraint firstItem="ywo-3N-xNf" firstAttribute="top" secondItem="5oJ-Z4-Rjl" secondAttribute="bottom" constant="4" id="jBM-qD-Lq5"/>
+                                                <constraint firstAttribute="trailing" secondItem="5oJ-Z4-Rjl" secondAttribute="trailing" constant="16" id="ooh-eY-ANs"/>
+                                                <constraint firstItem="5oJ-Z4-Rjl" firstAttribute="top" secondItem="QFZ-lz-yap" secondAttribute="topMargin" constant="8" id="pL7-EP-7hi"/>
                                                 <constraint firstItem="5oJ-Z4-Rjl" firstAttribute="centerY" secondItem="QFZ-lz-yap" secondAttribute="centerY" id="r1z-Zr-O74"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="xFa-zV-fK6" secondAttribute="bottom" constant="8" id="xCq-h1-sEW"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
@@ -104,6 +113,8 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageContentView" destination="xFa-zV-fK6" id="e37-py-bdl"/>
+                                            <outlet property="imageView" destination="xFa-zV-fK6" id="8Av-jF-Z8h"/>
                                             <outlet property="labelDetail" destination="ywo-3N-xNf" id="EXp-Cj-aCc"/>
                                             <outlet property="labelTitle" destination="5oJ-Z4-Rjl" id="886-q7-gbU"/>
                                             <segue destination="fMi-5M-APD" kind="show" identifier="addEntryIdentifier" id="3Jr-Ud-9Nl"/>
@@ -147,7 +158,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Npo-Lc-jN6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1163" y="316"/>
+            <point key="canvasLocation" x="1162.4000000000001" y="315.29235382308849"/>
         </scene>
         <!--Add Entry View Controller-->
         <scene sceneID="iIH-IR-RAT">
